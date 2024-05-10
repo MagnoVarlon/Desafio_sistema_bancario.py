@@ -1,5 +1,9 @@
 menu = """
 
+===========BEM-VINDO=========.
+
+OLÁ, SELECIONE UMA DAS OPÇÕES:
+
 [1] Depositar
 [2] Sacar
 [3] Extrato
@@ -19,10 +23,11 @@ while True:
 
     if opcao == "1":
         valor = float(input("Informe o valor do depósito:"))
-
+        
         if valor > 0:
             saldo += valor
             extrato += f"Depósito: R$ {valor:.2f}\n"
+        
     
         else:
             print("Operação falhou! O valor informado é inválido.")
@@ -35,6 +40,8 @@ while True:
         excedeu_limite = valor > limite
 
         excedeu_saques = numero_saques >= LIMITES_SAQUES
+
+        print("Aguarde... contando cédulas")
 
         if excedeu_saldo:
            print("Operação falhou! Você não tem saldo suficiente")
@@ -60,6 +67,7 @@ while True:
         print("=============================")
 
     elif opcao == "4":
+        print("Obrigado, volte sempre")
         break
 
     else:
